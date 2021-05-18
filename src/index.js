@@ -1,0 +1,1 @@
+document.getElementById('content').textContent = 'test12345'
