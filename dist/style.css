@@ -1,0 +1,18 @@
+body {
+    position: absolute;
+    background-image: url('images/background-image2.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.chef {
+    display: block;
+    width: 50%;
+    border-radius: 50%;
+}
+
+#content {
+    width: inherit;
+    color: wheat;
+    background-color: rgba(0, 0, 0, 0.575);
+}
