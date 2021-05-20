@@ -1,18 +1,98 @@
+body * {
+    font-size: 16px;
+    color: rgb(255, 255, 200);
+    line-height: 1.5em;
+}
+
 body {
-    position: absolute;
     background-image: url('images/background-image2.jpg');
     background-attachment: fixed;
     background-size: cover;
 }
 
-.chef {
-    display: block;
-    width: 50%;
-    border-radius: 50%;
+#content {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
 }
 
-#content {
-    width: inherit;
-    color: wheat;
-    background-color: rgba(0, 0, 0, 0.575);
+.header {
+    padding: 30px 100px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+#navBar {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+}
+
+.menuContainer {
+    position: relative;
+    display: inline-block;
+}
+
+button {
+    height: 50px;
+    width: 100px;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.dropCont button {
+    font-size: 1em;
+}
+
+.menuContainer button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.dropCont {
+    display: none;
+    position: absolute;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dropCont button {
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.main {
+    margin: 100px 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.show {
+    display: flex;
+    margin-left: -100px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
