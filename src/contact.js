@@ -8,7 +8,7 @@ const showContact = () => {
 
     // const map = document.createElement('img');
     // map.src = ;
-    // map.alt = ;
+    // map.alt = Location;
     // main.appendChild(map);
 
     return main;
