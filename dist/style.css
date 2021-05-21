@@ -1,6 +1,7 @@
 body * {
+    font-family: Courier, monospace;
     font-size: 16px;
-    color: rgb(255, 255, 200);
+    color: rgb(255, 255, 150);
     line-height: 1.5em;
 }
 
@@ -8,34 +9,44 @@ body {
     background-image: url('images/background-image2.jpg');
     background-attachment: fixed;
     background-size: cover;
+    height: 100vh;
 }
 
 #content {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     text-align: center;
+    min-height: 100%;
 }
 
 .header {
     padding: 30px 100px;
-    background-color: rgba(0, 0, 0, 0.4);
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 h1 {
     font-size: 4em;
+    font-style: italic;
 }
 
 h2 {
     font-size: 1.5em;
+    font-style: italic;
 }
 
 #navBar {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 0, 0, 0);
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .menuContainer {
@@ -45,54 +56,63 @@ h2 {
 
 button {
     height: 50px;
-    width: 100px;
+    width: 120px;
     padding: 10px 15px;
     font-size: 1.2em;
-    background-color: rgba(0, 0, 0, 0.4);
     border: none;
     cursor: pointer;
-}
-
-button:hover {
-    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
 }
 
 .dropCont button {
     font-size: 1em;
 }
 
-.menuContainer button:hover {
-    background-color: rgba(0, 0, 0, 0.6);
+p {
+    font-size: 1.3em;
 }
 
 .dropCont {
     display: none;
     position: absolute;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0);
+    margin-left: -120px;
 }
 
 .dropCont button {
+    font-size: 1em;
     padding: 10px 15px;
     text-decoration: none;
     display: block;
     border: none;
-    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.menuContainer:hover .dropCont {
+    display: flex;
 }
 
 .main {
-    margin: 100px 0;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
+    max-height: 600px;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50px;
 }
 
-.show {
-    display: flex;
-    margin-left: -100px;
+.chef {
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    border-radius: 50px;
+    box-sizing: border-box;
 }
 
 .footer {
-    position: fixed;
-    bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin-top: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
 }
