@@ -11,7 +11,7 @@ const introPage = () => {
     main.appendChild(createPara('Baked with hands full of passion'));
     main.appendChild(createPara('According to a recipe perfected over the years'));
     main.appendChild(createPara('With You and for You since 1925'));
-    // infoDiv.appendChild(chefImage);
+    main.appendChild(chefImage);
     main.appendChild(createPara('Visit our place or order online'));
 
     return main;
