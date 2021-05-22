@@ -25,7 +25,7 @@ const createPara = (text) => {
 }
 
 const loadHomePage = () => {
-    const home = document.getElementById('mainContainer')
+    const home = document.getElementById('mainContainer');
     home.innerHTML = '';
     home.appendChild(introPage());
 }
