@@ -44,30 +44,30 @@ const createNavBar = () => {
     dropdownContainer.id = 'dropCont';
     dropdownContainer.classList.add('dropCont');
 
-    const pizza = document.createElement('button');
-    pizza.classList.add('pizza');
-    pizza.textContent = 'Pizza';
-    pizza.addEventListener('click', () => {
-        menu.pizzaMenu();
-    })
-
     const drinks = document.createElement('button');
     drinks.classList.add('drinks');
     drinks.textContent = 'Drinks';
     drinks.addEventListener('click', () => {
-        menu.drinksMenu();
+        menu.loadDrinksPage();
+    })
+    
+    const pizza = document.createElement('button');
+    pizza.classList.add('pizza');
+    pizza.textContent = 'Pizza';
+    pizza.addEventListener('click', () => {
+        menu.loadPizzaPage();
     })
 
-    const empty = document.createElement('button');
-    empty.classList.add('emptyMenu');
-    empty.textContent = 'Empty';
-    empty.addEventListener('click', () => {
-        menu.emptyMenu();
+    const desserts = document.createElement('button');
+    desserts.classList.add('dessertsMenu');
+    desserts.textContent = 'Desserts';
+    desserts.addEventListener('click', () => {
+        menu.loadDessertsPage();
     })
 
-    dropdownContainer.appendChild(pizza);
     dropdownContainer.appendChild(drinks);
-    dropdownContainer.appendChild(empty);
+    dropdownContainer.appendChild(pizza);
+    dropdownContainer.appendChild(desserts);
     menuContainer.appendChild(menuBtn);
     menuContainer.appendChild(dropdownContainer);
 
