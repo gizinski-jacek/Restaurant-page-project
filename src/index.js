@@ -14,7 +14,7 @@ const createHeader = () => {
     const header2 = document.createElement('h2');
     header2.setAttribute('style', 'white-space: pre;');
     header2.textContent = 'The Best Place \nFor Your Pizza Needs';
-    
+
     main.appendChild(header1);
     main.appendChild(header2);
 
@@ -39,28 +39,27 @@ const createNavBar = () => {
     const menuBtn = document.createElement('button');
     menuBtn.classList.add('menuBtn');
     menuBtn.textContent = 'Menu';
-    menuBtn.addEventListener('click', funcDropdown);
 
     const dropdownContainer = document.createElement('div');
     dropdownContainer.id = 'dropCont';
     dropdownContainer.classList.add('dropCont');
 
     const pizza = document.createElement('button');
-    pizza.id = 'pizza';
+    pizza.classList.add('pizza');
     pizza.textContent = 'Pizza';
     pizza.addEventListener('click', () => {
         menu.pizzaMenu();
     })
 
     const drinks = document.createElement('button');
-    drinks.id = 'drinks';
+    drinks.classList.add('drinks');
     drinks.textContent = 'Drinks';
     drinks.addEventListener('click', () => {
         menu.drinksMenu();
     })
 
     const empty = document.createElement('button');
-    empty.id = 'emptyMenu';
+    empty.classList.add('emptyMenu');
     empty.textContent = 'Empty';
     empty.addEventListener('click', () => {
         menu.emptyMenu();
@@ -106,26 +105,6 @@ const createFooter = () => {
 
     return footer;
 }
-
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-const funcDropdown = () => {
-    document.getElementById('dropCont').classList.toggle('show');
-}
-
-// Close the dropdown if the user clicks outside of it
-// window.onclick = (e) => {
-//     if (!e.target.matches('.menuBtn')) {
-//         let dropdownsList = document.getElementById('dropCont');
-//         let i;
-//         for (i = 0; i < dropdownsList.length; i++) {
-//             let openDropdown = dropdownsList[i];
-//             if (openDropdown.classList.contains('show')) {
-//                 openDropdown.classList.remove('show');
-//             }
-//         }
-//     }
-// }
 
 const loadSite = (() => {
     const content = document.getElementById('content');
