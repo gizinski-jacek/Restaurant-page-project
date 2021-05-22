@@ -3,13 +3,14 @@ const showContact = () => {
     main.classList.add('main');
 
     main.appendChild(createPara('Phone number: 789 654 123'));
-    main.appendChild(createPara('Email: 789 654 123'));
-    // main.appendChild(createPara('Address: '));
+    main.appendChild(createPara('Email: pizzaliano@bestdough.com'));
+    main.appendChild(createPara('Address: Via Milano 666'));
 
-    // const map = document.createElement('img');
-    // map.src = ;
-    // map.alt = Our Location;
-    // main.appendChild(map);
+    const map = document.createElement('img');
+    map.classList.add('map');
+    map.src = 'images/map-location.png';
+    map.alt = 'Our Location';
+    main.appendChild(map);
 
     return main;
 }
