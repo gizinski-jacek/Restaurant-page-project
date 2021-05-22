@@ -94,7 +94,7 @@ p {
 .main {
     max-height: 600px;
     max-width: 600px;
-    margin: 100px auto;
+    margin: 80px auto;
     padding: 30px;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 50px;
@@ -106,7 +106,14 @@ p {
     margin: 20px auto;
     border: 1px solid rgba(0, 0, 0, 0.7);
     border-radius: 50px;
-    box-sizing: border-box;
+}
+
+.map {
+    display: block;
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid rgba(0, 255, 255, 0.7);
+    border-radius: 20px;
 }
 
 .footer {
