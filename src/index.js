@@ -5,8 +5,8 @@ import loadContactPage from './contact'
 
 
 const createHeader = () => {
-    const main = document.createElement('div');
-    main.classList.add('header');
+    const head = document.createElement('div');
+    head.id = 'header';
 
     const header1 = document.createElement('h1');
     header1.textContent = 'Pizzaliano';
@@ -15,10 +15,10 @@ const createHeader = () => {
     header2.setAttribute('style', 'white-space: pre;');
     header2.textContent = 'The Best Place \nFor Your Pizza Needs';
 
-    main.appendChild(header1);
-    main.appendChild(header2);
+    head.appendChild(header1);
+    head.appendChild(header2);
 
-    return main;
+    return head;
 };
 
 const createNavBar = () => {
@@ -26,7 +26,6 @@ const createNavBar = () => {
     navBar.id = 'navBar';
 
     const homeBtn = document.createElement('button');
-    homeBtn.classList.add('homeBtn');
     homeBtn.setAttribute('type', 'button');
     homeBtn.textContent = 'Home';
     homeBtn.addEventListener('click', () => {
@@ -37,46 +36,36 @@ const createNavBar = () => {
     menuContainer.classList.add('menuContainer');
 
     const menuBtn = document.createElement('button');
-    menuBtn.classList.add('menuBtn');
     menuBtn.textContent = 'Menu';
 
-    const dropdownContainer = document.createElement('div');
-    dropdownContainer.id = 'dropCont';
-    dropdownContainer.classList.add('dropCont');
+    const foodsContainer = document.createElement('div');
+    foodsContainer.classList.add('foodsContainer');
 
     const drinks = document.createElement('button');
-    drinks.classList.add('drinks');
     drinks.textContent = 'Drinks';
     drinks.addEventListener('click', () => {
         menu.loadDrinksPage();
     })
     
     const pizza = document.createElement('button');
-    pizza.classList.add('pizza');
     pizza.textContent = 'Pizza';
     pizza.addEventListener('click', () => {
         menu.loadPizzaPage();
     })
 
     const desserts = document.createElement('button');
-    desserts.classList.add('dessertsMenu');
     desserts.textContent = 'Desserts';
     desserts.addEventListener('click', () => {
         menu.loadDessertsPage();
     })
 
-    dropdownContainer.appendChild(drinks);
-    dropdownContainer.appendChild(pizza);
-    dropdownContainer.appendChild(desserts);
+    foodsContainer.appendChild(drinks);
+    foodsContainer.appendChild(pizza);
+    foodsContainer.appendChild(desserts);
     menuContainer.appendChild(menuBtn);
-    menuContainer.appendChild(dropdownContainer);
-
-    homeBtn.addEventListener('click', () => {
-        loadHomePage();
-    })
+    menuContainer.appendChild(foodsContainer);
 
     const contactBtn = document.createElement('button');
-    contactBtn.classList.add('contactBtn');
     contactBtn.setAttribute('type', 'button');
     contactBtn.textContent = 'Contact';
     contactBtn.addEventListener('click', () => {
@@ -90,17 +79,17 @@ const createNavBar = () => {
     return navBar;
 }
 
-const createContainer = () => {
-    const container = document.createElement('div');
-    container.id = 'mainContainer';
-    container.textContent = '';
+const createMainContainer = () => {
+    const mainContainer = document.createElement('div');
+    mainContainer.id = 'mainContainer';
+    mainContainer.textContent = '';
 
-    return container;
+    return mainContainer;
 }
 
 const createFooter = () => {
     const footer = document.createElement('div');
-    footer.classList.add('footer')
+    footer.id = 'footer';
     footer.textContent = 'Footer';
 
     return footer;
@@ -110,7 +99,7 @@ const loadSite = (() => {
     const content = document.getElementById('content');
     content.appendChild(createHeader());
     content.appendChild(createNavBar());
-    content.appendChild(createContainer());
+    content.appendChild(createMainContainer());
     content.appendChild(createFooter());
     loadHomePage();
 })();

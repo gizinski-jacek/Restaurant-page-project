@@ -1,23 +1,23 @@
-const introPage = () => {
+const welcomePage = () => {
     const main = document.createElement('div');
     main.classList.add('main');
 
     const chefImage = document.createElement('img');
-    chefImage.classList.add('chef');
+    chefImage.classList.add('chefImage');
     chefImage.src = 'images/chef-image.jpg';
     chefImage.alt = 'Chef';
 
-    main.appendChild(createPara('Best classical pizza in the city'));
-    main.appendChild(createPara('Baked with hands full of passion'));
-    main.appendChild(createPara('According to a recipe perfected over the years'));
-    main.appendChild(createPara('With You and for You since 1925'));
+    main.appendChild(addPara('Best classical pizza in the city'));
+    main.appendChild(addPara('Baked with hands full of passion'));
+    main.appendChild(addPara('According to a recipe perfected over the years'));
+    main.appendChild(addPara('With You and for You since 1925'));
     main.appendChild(chefImage);
-    main.appendChild(createPara('Visit our place or order online'));
+    main.appendChild(addPara('Visit our place or order online'));
 
     return main;
 }
 
-const createPara = (text) => {
+const addPara = (text) => {
     const para = document.createElement('p');
     para.textContent = text;
 
@@ -27,7 +27,7 @@ const createPara = (text) => {
 const loadHomePage = () => {
     const home = document.getElementById('mainContainer');
     home.innerHTML = '';
-    home.appendChild(introPage());
+    home.appendChild(welcomePage());
 }
 
 export default loadHomePage;

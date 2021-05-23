@@ -1,23 +1,24 @@
-const menu = document.getElementById('mainContainer');
-
 const pizzaMenu = () => {
     const main = document.createElement('div');
     main.classList.add('main', 'mainPizza');
+
     pizzaList.forEach((pizza) => {
         const item = document.createElement('div');
         item.classList.add('item');
         
         const img = document.createElement('img');
         img.src = pizza.image;
+
         const name = document.createElement('p');
         name.textContent = pizza.name;
-        name.classList.add('name');
-        const topping = document.createElement('p');
-        topping.textContent = 'Toppings: ' + pizza.toppings;
+        name.classList.add('foodName');
+
+        const toppings = document.createElement('p');
+        toppings.textContent = 'Toppings: ' + pizza.toppings;
 
         item.appendChild(img);
         item.appendChild(name);
-        item.appendChild(topping);
+        item.appendChild(toppings);
         main.appendChild(item);
     })
     return main;
@@ -26,15 +27,17 @@ const pizzaMenu = () => {
 const drinksMenu = () => {
     const main = document.createElement('div');
     main.classList.add('main', 'mainDrinks');
+
     drinksList.forEach((drink) => {
         const item = document.createElement('div');
         item.classList.add('item');
 
         const img = document.createElement('img');
         img.src = drink.image;
+
         const name = document.createElement('p');
         name.textContent = drink.name;
-        name.classList.add('name');
+        name.classList.add('foodName');
         
         item.appendChild(img);
         item.appendChild(name);
@@ -46,15 +49,17 @@ const drinksMenu = () => {
 const dessertsMenu = () => {
     const main = document.createElement('div');
     main.classList.add('main', 'mainDesserts');
+    
     dessertsList.forEach((dessert) => {
         const item = document.createElement('div');
         item.classList.add('item');
 
         const img = document.createElement('img');
         img.src = dessert.image;
+
         const name = document.createElement('p');
         name.textContent = dessert.name;
-        name.classList.add('name');
+        name.classList.add('foodName');
         
         item.appendChild(img);
         item.appendChild(name);
@@ -92,6 +97,14 @@ class Dessert {
     }
 }
 
+// Added drinks.
+const espresso = new Drink('Espresso', 'images/drinks/espresso.png');
+const cappuccino = new Drink('Cappuccino', 'images/drinks/cappuccino.png');
+const caffeLatte = new Drink('Caffe\' Latte', 'images/drinks/caffe-latte.png');
+const americano = new Drink('Americano', 'images/drinks/americano.png');
+const longBlack = new Drink('Long Black', 'images/drinks/long-black.png');
+
+// Added pizzas.
 const margherita = new Pizza('Margherita', 'tomato sauce, mozzarella, basil', 'images/pizza/margherita.png');
 const pepperoni = new Pizza('Pepperoni', 'tomato sauce, mozzarella pepperoni, ', 'images/pizza/pepperoni.png');
 const prosciutto = new Pizza('Prosciutto', 'tomato sauce, mozzarella, prosciutto, rocket/arugula', 'images/pizza/prosciutto.png');
@@ -99,27 +112,22 @@ const diablo = new Pizza('Diablo', 'tomato sauce, mozzarella, parma ham, chilli 
 const marinara = new Pizza('Marinara', 'tomato sauce, oregano and garlic', 'images/pizza/marinara.png');
 const quattroFormaggi = new Pizza('Quattro Formaggi', 'mozzarella, parmesan, provolone, blue cheese', 'images/pizza/quattro-formaggi.png');
 
-const espresso = new Drink('Espresso', 'images/drinks/espresso.png');
-const cappuccino = new Drink('Cappuccino', 'images/drinks/cappuccino.png');
-const caffeLatte = new Drink('Caffe\' Latte', 'images/drinks/caffe-latte.png');
-const americano = new Drink('Americano', 'images/drinks/americano.png');
-const longBlack = new Drink('Long Black', 'images/drinks/long-black.png');
-
+// Added desserts.
 const mudPie = new Dessert('Mocha Mud Pie', 'images/desserts/mud-pie.png');
 const rockslide = new Dessert('Rockslide Pie', 'images/desserts/rockslide.png');
 const oreo = new Dessert('Oreo Madness', 'images/desserts/oreo.png');
 const skyPie = new Dessert('Pie-In-The-Sky', 'images/desserts/sky-pie.png');
 
-const loadPizzaPage = () => {
-    const menu = document.getElementById('mainContainer');
-    menu.innerHTML = '';
-    menu.appendChild(pizzaMenu());
-}
-
 const loadDrinksPage = () => {
     const menu = document.getElementById('mainContainer');
     menu.innerHTML = '';
     menu.appendChild(drinksMenu());
+}
+
+const loadPizzaPage = () => {
+    const menu = document.getElementById('mainContainer');
+    menu.innerHTML = '';
+    menu.appendChild(pizzaMenu());
 }
 
 const loadDessertsPage = () => {
@@ -129,7 +137,7 @@ const loadDessertsPage = () => {
 }
 
 export {
-    loadPizzaPage,
     loadDrinksPage,
+    loadPizzaPage,
     loadDessertsPage,
 }
