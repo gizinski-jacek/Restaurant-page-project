@@ -20,7 +20,7 @@ body {
     min-height: 100%;
 }
 
-.header {
+#header {
     padding: 30px 100px;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
@@ -37,7 +37,7 @@ h2 {
     font-style: italic;
 }
 
-#navBar, .dropCont {
+#navBar, .foodsContainer {
     border-top: 1px solid rgba(0, 0, 0, 0);
 }
 
@@ -64,7 +64,7 @@ button {
     cursor: pointer;
 }
 
-.dropCont button {
+.foodsContainer button {
     font-size: 1em;
 }
 
@@ -72,13 +72,13 @@ p {
     font-size: 1.3em;
 }
 
-.dropCont {
+.foodsContainer {
     position: absolute;
     display: none;
     margin-left: -120px;
 }
 
-.dropCont button {
+.foodsContainer button {
     display: block;
     padding: 10px 15px;
     font-size: 1em;
@@ -86,7 +86,7 @@ p {
     border: none;
 }
 
-.menuContainer:hover .dropCont {
+.menuContainer:hover .foodsContainer {
     display: flex;
 }
 
@@ -111,7 +111,7 @@ p {
     border-radius: 50%;
 }
 
-.name {
+.foodName {
     font-size: 1.8em;
     font-weight: 600;
 }
@@ -121,7 +121,7 @@ p {
     font-style: italic;
 }
 
-.chef {
+.chefImage {
     display: block;
     width: 50%;
     margin: 20px auto;
@@ -129,7 +129,7 @@ p {
     border-radius: 50px;
 }
 
-.map {
+.mapImage {
     display: block;
     width: 90%;
     margin: 20px auto;
@@ -137,7 +137,7 @@ p {
     border-radius: 20px;
 }
 
-.footer {
+#footer {
     width: 100%;
     margin-top: auto;
     padding: 10px;
