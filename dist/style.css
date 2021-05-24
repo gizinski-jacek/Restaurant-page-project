@@ -91,7 +91,7 @@ p {
 }
 
 .main {
-    max-width: 600px;
+    width: 450px;
     margin: 80px auto;
     padding: 30px;
     background-color: rgba(0, 0, 0, 0.7);
@@ -99,12 +99,16 @@ p {
 }
 
 .item {
-    margin: 50px;
+    padding: 30px;
+    margin: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
 }
 
 .item img {
-    width: 200px;
-    border-radius: 20px;
+    height: 200px;
+    border-radius: 10px;
 }
 
 .mainPizza img {
@@ -117,7 +121,7 @@ p {
 }
 
 .item p {
-    width: 400px;
+    
     font-style: italic;
 }
 
