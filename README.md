@@ -1,3 +1,3 @@
 # Restaurant Page Project
 
-2021.05.18  Initial file setup for restaurant page project following The Odin Project curriculum.
+A restaurant page made using Javascript modules and webpack.
