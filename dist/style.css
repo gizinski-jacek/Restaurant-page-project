@@ -17,7 +17,6 @@ body {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	min-height: 100%;
 }
 
 #header {
@@ -103,19 +102,37 @@ p {
 }
 
 .main {
-	width: 450px;
+	width: 500px;
 	margin: 80px auto;
 	padding: 30px;
 	background-color: rgba(0, 0, 0, 0.7);
 	border-radius: 50px;
 }
 
+.main.mainDrinks,
+.main.mainPizza,
+.main.mainDesserts {
+	width: 700px;
+}
+
+.mainDrinks,
+.mainPizza,
+.mainDesserts {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	grid-auto-rows: auto;
+	gap: 30px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
 .item {
 	padding: 30px;
-	margin: 30px;
 	background-color: rgba(0, 0, 0, 0.5);
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	border-radius: 10px;
+	width: 240px;
 }
 
 .item img {
