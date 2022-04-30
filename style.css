@@ -1,161 +1,169 @@
 body * {
-    font-family: Courier, monospace;
-    font-size: 16px;
-    color: rgb(255, 255, 150);
-    line-height: 1.5em;
+	font-family: Courier, monospace;
+	font-size: 16px;
+	color: rgb(255, 255, 150);
+	line-height: 1.5em;
 }
 
 body {
-    background-image: url('images/background-image2.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100vh;
+	background-image: url('images/background-image2.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
 }
 
 #content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	min-height: 100%;
 }
 
 #header {
-    padding: 30px 100px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    background-color: rgba(0, 0, 0, 0.5);
+	padding: 30px 100px;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 h1 {
-    font-size: 4em;
-    font-style: italic;
+	font-size: 4em;
+	font-style: italic;
 }
 
 h2 {
-    font-size: 1.5em;
-    font-style: italic;
+	font-size: 1.5em;
+	font-style: italic;
 }
 
-#navBar, .foodsContainer {
-    border-top: 1px solid rgba(0, 0, 0, 0);
+#navBar,
+.foodsContainer {
+	border-top: 1px solid rgba(0, 0, 0, 0);
 }
 
 button {
-    background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.7);
 }
 
 .menuContainer {
-    position: relative;
-    display: inline-block;
+	position: relative;
+	display: inline-block;
 }
 
 button {
-    height: 50px;
-    width: 120px;
-    padding: 10px 15px;
-    font-size: 1.2em;
-    text-align: center;
-    border: none;
-    cursor: pointer;
+	height: 50px;
+	width: 120px;
+	padding: 10px 15px;
+	font-size: 1.2em;
+	text-align: center;
+	border: none;
+	cursor: pointer;
 }
 
 .foodsContainer button {
-    font-size: 1em;
+	font-size: 1em;
 }
 
 p {
-    font-size: 1.3em;
+	font-size: 1.3em;
 }
 
 .foodsContainer {
-    position: absolute;
-    display: none;
-    margin-left: -120px;
-    
+	position: absolute;
+	display: none;
+	margin-left: -120px;
 }
 
 .foodsContainer button {
-    display: block;
-    padding: 10px 15px;
-    font-size: 1em;
-    text-decoration: none;
-    border: none;
+	display: block;
+	padding: 10px 15px;
+	font-size: 1em;
+	text-decoration: none;
+	border: none;
 }
 
 .menuContainer:hover .foodsContainer {
-    display: flex;
-    animation: drop 250ms ease-in-out 0s 1 forwards normal;
-    transform-origin: top center;
+	display: flex;
+	animation: drop 250ms ease-in-out 0s 1 forwards normal;
+	transform-origin: top center;
 }
 
 @keyframes drop {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
 
 .main {
-    width: 450px;
-    margin: 80px auto;
-    padding: 30px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 50px;
+	width: 450px;
+	margin: 80px auto;
+	padding: 30px;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 50px;
 }
 
 .item {
-    padding: 30px;
-    margin: 30px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+	padding: 30px;
+	margin: 30px;
+	background-color: rgba(0, 0, 0, 0.5);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
 }
 
 .item img {
-    height: 200px;
-    border-radius: 10px;
+	height: 200px;
+	border-radius: 10px;
 }
 
 .mainPizza img {
-    border-radius: 50%;
+	border-radius: 50%;
 }
 
 .foodName {
-    font-size: 1.8em;
-    font-weight: 600;
+	font-size: 1.8em;
+	font-weight: 600;
 }
 
 .item p {
-    
-    font-style: italic;
+	font-style: italic;
 }
 
 .chefImage {
-    display: block;
-    width: 50%;
-    margin: 20px auto;
-    border: 1px solid rgba(0, 0, 0, 0.7);
-    border-radius: 50px;
+	display: block;
+	width: 50%;
+	margin: 20px auto;
+	border: 1px solid rgba(0, 0, 0, 0.7);
+	border-radius: 50px;
 }
 
 .mapImage {
-    display: block;
-    width: 90%;
-    margin: 20px auto;
-    border: 1px solid rgba(0, 255, 255, 0.7);
-    border-radius: 20px;
+	display: block;
+	width: 90%;
+	margin: 20px auto;
+	border: 1px solid rgba(0, 255, 255, 0.7);
+	border-radius: 20px;
 }
 
-#footer {
-    width: 100%;
-    margin-top: auto;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+.footer {
+	width: 100%;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.footer a {
+	font-weight: 600;
+	color: rgb(255, 255, 255);
+	padding: 4px;
+	float: right;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
 }
